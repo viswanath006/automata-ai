@@ -233,7 +233,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - 💼 LinkedIn: [linkedin.com/in/viswanath-yeleswarapu-272168335](https://www.linkedin.com/in/viswanath-yeleswarapu-272168335)
 - 🐈 GitHub: [@viswanath006](https://github.com/viswanath006)
-- ✉️ Email: [your.email@example.com](mailto:your.email@example.com)
+- ✉️ Email: [viswanathyeleswaraou77@gmail.com](mailto:viswanathyeleswaraou77@gmail.com)
 
 ---
 
