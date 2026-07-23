@@ -58,7 +58,7 @@
 
 ## 🎥 Demo Video
 
-[![Watch the video](https://via.placeholder.com/800x450?text=Click+to+watch+Demo+Video)]([DEMO_VIDEO_URL])
+![Watch the functionality demo](./demo_recording.webp)
 
 ---
 
