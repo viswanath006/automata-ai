@@ -58,7 +58,7 @@
 
 ## 🎥 Demo Video
 
-![Watch the functionality demo](./demo_recording.webp)
+![Watch the functionality demo](./demo_recording.mp4)
 
 ---
 
