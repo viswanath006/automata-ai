@@ -1,0 +1,135 @@
+/* src/app/motion.css */
+
+:root {
+  /* 
+   * Strict Hackathon Easing Tokens (Mandated by PDF)
+   */
+  --motion-ease-snappy: ease-out; /* 150ms-200ms ease-out constraint */
+  --motion-ease-smooth: ease-in-out; /* 300ms-400ms ease-in-out constraint */
+  --motion-ease-entrance: ease-out;
+  
+  /* Strict Hackathon Durations */
+  --motion-duration-micro: 150ms; /* Must be 150ms-200ms */
+  --motion-duration-layout: 350ms; /* Must be 300ms-400ms */
+  --motion-duration-entrance: 300ms; /* Ensures max 500ms total orchestraton timeline (300ms + 200ms max delay) */
+}
+
+@layer components {
+  /* Hardware Accelerated GPU Transitions */
+  .transition-micro {
+    transition-property: opacity, transform, scale, translate, box-shadow, filter, border-color, background-color, color;
+    transition-timing-function: var(--motion-ease-snappy);
+    transition-duration: var(--motion-duration-micro);
+    will-change: transform, opacity; /* Hint browser to prioritize composite layer */
+  }
+
+  .transition-layout {
+    transition-property: opacity, transform, scale, translate, box-shadow, filter, border-color, background-color, color, height;
+    transition-timing-function: var(--motion-ease-smooth);
+    transition-duration: var(--motion-duration-layout);
+  }
+
+  /* 
+   * Premium Buttons
+   * Dropped the outdated 2018 'translateY(-2px)' lift.
+   * Replaced with tactile scaling, inset lighting, and ambient glow.
+   */
+  .btn-primary-motion {
+    transition-property: opacity, transform, scale, translate, box-shadow, filter, border-color, background-color, color;
+    transition-timing-function: var(--motion-ease-snappy);
+    transition-duration: var(--motion-duration-micro);
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.3), /* Sharp top highlight */
+      0 4px 12px -2px rgba(255, 200, 1, 0.15);  /* Subtle ambient floor glow */
+    transform: translateZ(0); /* Force GPU */
+  }
+  
+  .btn-primary-motion:hover {
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.4),
+      0 8px 24px -4px rgba(255, 200, 1, 0.3); /* Bloom the glow organically */
+    filter: brightness(1.05); /* Slight lighting shift instead of physical movement */
+  }
+
+  .btn-primary-motion:active {
+    transform: scale(0.97); /* Tactile physical press */
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.2), /* Recess the lighting */
+      0 2px 8px -2px rgba(255, 200, 1, 0.1);
+  }
+
+  /* Secondary Interactions */
+  .btn-secondary-motion {
+    transition-property: opacity, transform, scale, translate, box-shadow, filter, border-color, background-color, color;
+    transition-timing-function: var(--motion-ease-snappy);
+    transition-duration: var(--motion-duration-micro);
+    border: 1px solid transparent;
+    opacity: 0.7;
+  }
+  
+  .btn-secondary-motion:hover {
+    border-color: var(--color-border-subtle);
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .nav-link-motion {
+    transition-property: opacity, transform, scale, translate, box-shadow, filter, border-color, background-color, color;
+    transition-timing-function: var(--motion-ease-snappy);
+    transition-duration: var(--motion-duration-micro);
+    opacity: 0.7;
+  }
+  
+  .nav-link-motion:hover {
+    opacity: 1;
+    color: var(--color-text-heading);
+  }
+
+  /* 
+   * Cinematic Page Entrance Orchestration 
+   * Swapped cheap generic fade-up for a premium Blur-Fade-Scale 
+   */
+  .animate-entrance {
+    animation: fade-in-blur var(--motion-duration-entrance) var(--motion-ease-entrance) forwards;
+    opacity: 0;
+    will-change: transform, opacity, filter;
+  }
+  
+  .delay-50 { animation-delay: 50ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+}
+
+/* 
+ * The Vercel/Stripe standard entry animation.
+ * Combines a 12px translation, a 0.99x scale, and an 8px blur filter 
+ * dissolving into a perfectly sharp final state.
+ */
+@keyframes fade-in-blur {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Strict WAI-ARIA Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-entrance {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
