@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150x150?text=Logo" alt="Automata Logo" width="120" height="120" />
+  <img src="./public/logo.png" alt="Nano Banana Logo" width="120" height="120" />
 
-  # Automata: AI Automation Platform
+  # Nano Banana: AI Automation Platform
 
   <p>
     <strong>A premium AI-powered SaaS Landing Page built for a Frontend Engineering Hackathon featuring modern UI, advanced React architecture, high performance, accessibility, SEO, and responsive engineering.</strong>
@@ -44,8 +44,8 @@
 
 | Section | Preview |
 | :--- | :--- |
-| **Hero Section** | ![Hero Placeholder](https://via.placeholder.com/800x450?text=Hero+Section) |
-| **Bento Features** | ![Features Placeholder](https://via.placeholder.com/800x450?text=Bento+Features) |
+| **Hero Section** | ![Hero Screenshot](./public/screenshots/hero.png) |
+| **Bento Features** | ![Features Screenshot](./public/screenshots/features.png) |
 | **Dynamic Pricing** | ![Pricing Placeholder](https://via.placeholder.com/800x450?text=Dynamic+Pricing) |
 | **Testimonials** | ![Testimonials Placeholder](https://via.placeholder.com/800x450?text=Testimonials) |
 | **Mobile View** | ![Mobile Placeholder](https://via.placeholder.com/400x800?text=Mobile+Responsive) |
@@ -229,11 +229,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author
 
-**[Your Name / Alias]**
+**Viswanath Yeleswarapu**
 
-- 🌐 Portfolio: [your-portfolio.com]([PORTFOLIO_URL])
-- 💼 LinkedIn: [linkedin.com/in/yourusername]([LINKEDIN_URL])
-- 🐈 GitHub: [@yourusername](https://github.com/viswanath006)
+- 💼 LinkedIn: [linkedin.com/in/viswanath-yeleswarapu-272168335](https://www.linkedin.com/in/viswanath-yeleswarapu-272168335)
+- 🐈 GitHub: [@viswanath006](https://github.com/viswanath006)
 - ✉️ Email: [your.email@example.com](mailto:your.email@example.com)
 
 ---

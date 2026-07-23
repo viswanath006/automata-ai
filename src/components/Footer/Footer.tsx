@@ -5,8 +5,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 mb-20 md:ml-32">
           {/* Logo Column */}
           <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
-            <div className="w-10 h-10 bg-primary rounded transform -skew-x-12 flex items-center justify-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <div className="flex items-center gap-2">
+              <img src="/logo.png" alt="Nano Banana Logo" className="h-8 w-8 object-contain" />
+              <span className="text-heading font-bold text-lg tracking-tight">Nano Banana</span>
             </div>
           </div>
           
@@ -46,13 +47,13 @@ export default function Footer() {
         
         {/* Massive Typography Footer */}
         <div className="w-full flex items-end justify-center relative mt-12 overflow-hidden pointer-events-none select-none h-48 md:h-72">
-          <span className="text-[20vw] font-bold text-surface-hover leading-none tracking-tighter absolute bottom-[-4vw]">
-            platform
+          <span className="text-[15vw] font-bold text-surface-hover leading-none tracking-tighter absolute bottom-[-4vw]">
+            nanobanana
           </span>
         </div>
         
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-[0.65rem] text-muted font-medium uppercase tracking-widest z-20">
-          &copy; {new Date().getFullYear()} AI.Platform. All rights reserved.
+          &copy; {new Date().getFullYear()} Nano Banana. All rights reserved.
         </div>
       </div>
     </footer>

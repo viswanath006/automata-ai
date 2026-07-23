@@ -3,7 +3,8 @@ export default function Header() {
     <header className="absolute top-0 z-50 w-full bg-transparent animate-entrance">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          {/* Logo removed per request */}
+          <img src="/logo.png" alt="Nano Banana Logo" className="h-8 w-8 object-contain" />
+          <span className="text-heading font-bold text-lg tracking-tight">Nano Banana</span>
         </div>
         <nav aria-label="Main Navigation" className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-small font-medium nav-link-motion">Features</a>
